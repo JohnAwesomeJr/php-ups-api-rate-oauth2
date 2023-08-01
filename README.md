@@ -1,6 +1,4 @@
-Absolutely! Here's the updated readme to reflect the requirement of using OAuth2 authentication because UPS mandates it:
-
-# UPS Shipping Cost Calculator with Required OAuth2 Authentication 🚀
+# UPS API Shipping Cost Calculator with Required OAuth2 Authentication 🚀
 
 Welcome to the UPS Shipping Cost Calculator script! 🚀
 

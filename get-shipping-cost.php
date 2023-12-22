@@ -1,7 +1,9 @@
 <?php
 
-$client_id = '';
-$client_secret = '';
+$client_id = '<client ID goes here>';
+$client_secret = '<client secret goes here>';
+$ups_account_number = '<UPS Account Number Goes Here>';
+
 
 // ***** SHIPPING SERVICE AVAILABLE OPTIONS *****
 // Domestic 	
@@ -38,51 +40,50 @@ $client_secret = '';
 
 // PACKAGE
 $package_info = array(
-    'service' => '03',
+    'service' => '02',
     'package_type' => '02',
-    'Weight' => '5',
-    'length' => '5',
-    'width' => '5',
-    'height' => '5',
+    'Weight' => '1',
+    'length' => '7',
+    'width' => '4',
+    'height' => '2',
 );
 
 // SHIPPER
 $shipper_info = array(
-    'account_number' => '',
-    'name' => '',
-    'address1' => '',
+    'account_number' => $ups_account_number,
+    'name' => 'Mr. President',
+    'address1' => '1600 Pennsylvania Avenue NW',
     'address2' => '',
     'address3' => '',
-    'city' => '',
-    'state' => '',
-    'zip' => '',
+    'city' => 'Washington',
+    'state' => 'DC',
+    'zip' => '20500',
+    'country' => 'us',
+);
+
+// FROM ADDRESS
+$from_address_info = array(
+    'name' => 'Mr. President',
+    'address1' => '1600 Pennsylvania Avenue NW',
+    'address2' => '',
+    'address3' => '',
+    'city' => 'Washington',
+    'state' => 'DC',
+    'zip' => '20500',
     'country' => 'us',
 );
 
 // TO ADDRESS
 $to_address_info = array(
-    'name' => '',
-    'address1' => '',
+    'name' => 'Thomas Jefferson',
+    'address1' => '931 Thomas Jefferson Parkway',
     'address2' => '',
     'address3' => '',
-    'city' => '',
-    'state' => '',
-    'zip' => '',
+    'city' => 'Charlottesville',
+    'state' => 'VA',
+    'zip' => '22902',
     'country' => 'US',
 );
-
-// FROM ADDRESS
-$from_address_info = array(
-    'name' => '',
-    'address1' => '',
-    'address2' => '',
-    'address3' => '',
-    'city' => '',
-    'state' => '',
-    'zip' => '',
-    'country' => 'us',
-);
-
 
 
 
@@ -213,6 +214,7 @@ function getShippingCost($accessToken, $shipper_info, $to_address_info, $from_ad
             )
         )
     );
+
     curl_setopt_array($curl, [
         CURLOPT_HTTPHEADER => [
             "Authorization: Bearer " . $accessToken,
@@ -239,7 +241,14 @@ function getShippingCost($accessToken, $shipper_info, $to_address_info, $from_ad
     }
 }
 
+
+
+
+
 // EXAMPLE OF HOW TO USE
+// Get Token
 $accessToken = getToken($client_id, $client_secret);
+// Use API to get price
 $totalCharges = getShippingCost($accessToken, $shipper_info, $to_address_info, $from_address_info, $package_info);
+// Show Price
 echo 'Total Charges: $' . $totalCharges;

@@ -1,8 +1,8 @@
 <?php
 
-$client_id = '<client ID goes here>';
-$client_secret = '<client secret goes here>';
-$ups_account_number = '<UPS Account Number Goes Here>';
+$client_id = 'dRJGi3o4fw8rI8woNFhMYb3LfdBxcd2ciGEmqw90OOsCMLQ5';
+$client_secret = 'G6dk2G5Hw1GrExvXGeGEr0A0ZcR0JaTT1QAASHtA94oDEun1TiO910Yb633RLn4d';
+$ups_account_number = 'C870V5';
 
 
 // ***** SHIPPING SERVICE AVAILABLE OPTIONS *****

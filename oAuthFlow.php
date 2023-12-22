@@ -1,9 +1,9 @@
 <?php
 
 // Set your application credentials
-$clientID = '<Developers App Client Id>';
-$clientSecret = '<Developers App Client Secret>';
-$redirectURI = '<Developers App Callback URL>';
+$clientID = 'dRJGi3o4fw8rI8woNFhMYb3LfdBxcd2ciGEmqw90OOsCMLQ5';
+$clientSecret = 'G6dk2G5Hw1GrExvXGeGEr0A0ZcR0JaTT1QAASHtA94oDEun1TiO910Yb633RLn4d';
+$redirectURI = 'https://https://playground.christensencreativeco.com/callBackUrl.php';
 
 // Step 1: Initiate the authorization process
 $authUrl = 'https://wwwcie.ups.com/security/v1/oauth/authorize';

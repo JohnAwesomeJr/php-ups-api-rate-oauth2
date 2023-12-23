@@ -6,12 +6,10 @@
 $clientID = 'dRJGi3o4fw8rI8woNFhMYb3LfdBxcd2ciGEmqw90OOsCMLQ5';
 $clientSecret = 'G6dk2G5Hw1GrExvXGeGEr0A0ZcR0JaTT1QAASHtA94oDEun1TiO910Yb633RLn4d';
 $redirectURI = 'https://playground.christensencreativeco.com/php-ups-api-rate-oauth2/receiveAuthentication.php';
-$authorizationCode = $_GET['code'];
-
 
 $curl = curl_init();
 
-$payload = "grant_type=authorization_code&code=" . $authorizationCode . "&redirect_uri=" . $redirectURI;
+$payload = "grant_type=authorization_code&code=string&redirect_uri=" . $redirectURI;
 
 curl_setopt_array($curl, [
     CURLOPT_HTTPHEADER => [

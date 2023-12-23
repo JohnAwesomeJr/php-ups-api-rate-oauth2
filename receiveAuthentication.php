@@ -55,7 +55,7 @@ if ($error) {
     $filePath = $folderPath . '/filename.txt';
 
     // Write the variable to the file
-    file_put_contents($filePath, $responseData);
+    file_put_contents($filePath, json_encode($responseData));
 
     echo "Variable saved to file: $filePath";
 }

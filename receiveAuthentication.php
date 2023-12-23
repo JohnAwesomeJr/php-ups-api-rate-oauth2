@@ -39,9 +39,9 @@ if ($error) {
     echo "<hr>";
     // Use this refresh Token to get a new access token when the access token expires.
     echo "<h1>Use this refresh Token to get a new access token when the access token expires.</h1><br>";
-    echo $responseData['access_token'];
+    echo $responseData['refresh_token'];
     echo "<hr>";
-    echo "by default I am saving these tokens in a txt tile in the \"./tokens\" folder";
+    echo "by default I am saving these tokens in a txt file in the \"./tokens\" folder";
 
     // Determine the folder path (assuming the "tokens" folder is in the same directory as this PHP script)
     $folderPath = __DIR__ . '/tokens';

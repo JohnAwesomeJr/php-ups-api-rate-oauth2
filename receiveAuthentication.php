@@ -26,12 +26,14 @@ curl_setopt_array($curl, [
 
 $response = curl_exec($curl);
 $error = curl_error($curl);
+$responseData = json_decode($response, true);
+
 
 curl_close($curl);
 
 if ($error) {
     echo "cURL Error #:" . $error;
 } else {
-    echo $response;
+    echo $responseData['access_token'];
 }
 ?>

@@ -34,8 +34,9 @@ if ($error) {
     echo "cURL Error #:" . $error;
 } else {
     // Use this access token to make API Calls.
-    echo "<h1>Use this access token to make API Calls</h1><br><hr>";
+    echo "<h1>Use this access token to make API Calls</h1><br>";
     echo $responseData['access_token'];
+    echo "<hr>";
     // Use this refresh Token to get a new access token when the access token expires.
     echo "<h1>Use this refresh Token to get a new access token when the access token expires.</h1><br>";
     echo $responseData['access_token'];

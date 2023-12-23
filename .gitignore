@@ -1,0 +1,5 @@
+# Ignore everything in the "tokens" folder
+/tokens/*
+
+# Except the "deleteMe.txt" file
+!/tokens/deleteMe.txt

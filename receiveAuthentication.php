@@ -52,7 +52,7 @@ if ($error) {
     }
 
     // Determine the file path within the "tokens" folder
-    $filePath = $folderPath . '/filename.txt';
+    $filePath = $folderPath . '/usersTokens.json';
 
     // Write the variable to the file
     file_put_contents($filePath, json_encode($responseData));

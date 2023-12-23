@@ -8,7 +8,6 @@ $clientSecret = 'G6dk2G5Hw1GrExvXGeGEr0A0ZcR0JaTT1QAASHtA94oDEun1TiO910Yb633RLn4
 $redirectURI = 'https://playground.christensencreativeco.com/php-ups-api-rate-oauth2/receiveAuthentication.php';
 $authorizationCode = $_GET['code'];
 
-
 $curl = curl_init();
 
 $payload = "grant_type=authorization_code&code=" . $authorizationCode . "&redirect_uri=" . $redirectURI;
@@ -34,6 +33,11 @@ curl_close($curl);
 if ($error) {
     echo "cURL Error #:" . $error;
 } else {
+    // Use this access token to make API Calls.
+    echo "<h1>Use this access token to make API Calls</h1><br><hr>";
+    echo $responseData['access_token'];
+    // Use this refresh Token to get a new access token when the access token expires.
+    echo "<h1>Use this refresh Token to get a new access token when the access token expires.</h1><br>";
     echo $responseData['access_token'];
 }
 ?>

@@ -1,0 +1,2 @@
+This file can be deleted. 
+The only reason it is here is to maintain folder structure.

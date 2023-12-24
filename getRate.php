@@ -132,6 +132,6 @@ curl_close($curl);
 if ($error) {
   echo "cURL Error #:" . $error;
 } else {
-  echo $response;
+  echo json_encode($response);
 }
 ?>

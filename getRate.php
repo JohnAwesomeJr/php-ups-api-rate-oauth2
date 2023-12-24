@@ -133,6 +133,6 @@ if ($error) {
   echo "cURL Error #:" . $error;
 } else {
   header('Content-Type: application/json');
-  echo $response[0];
+  echo json_decode($response)['RateResponse'];
 }
 ?>

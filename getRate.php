@@ -121,7 +121,7 @@ curl_setopt_array($curl, [
     "transactionSrc: testing"
   ],
   CURLOPT_POSTFIELDS => json_encode($payload),
-  CURLOPT_URL => "https://wwwcie.ups.com/api/rating/" . version . "/" . "?" . http_build_query($query),
+  CURLOPT_URL => "https://wwwcie.ups.com/api/rating/" . version . "?" . http_build_query($query),
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_CUSTOMREQUEST => "POST",
 ]);

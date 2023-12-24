@@ -134,6 +134,6 @@ if ($error) {
 } else {
   header('Content-Type: application/json');
   $phpResponseObject = json_decode($response);
-  echo json_encode($phpResponseObject->RateResponse->RatedShipment);
+  echo json_encode($phpResponseObject->RateResponse->RatedShipment->TotalCharges->MonetaryValue);
 }
 ?>

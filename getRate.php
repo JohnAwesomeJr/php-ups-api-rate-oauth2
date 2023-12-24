@@ -3,8 +3,16 @@
  * Requires libcurl
  */
 
+//  Used to define the request type. 
+// Valid Values:
+// Rate = The server rates (The default Request option is Rate if a Request Option is not provided). 
+// Shop = The server validates the shipment, and returns rates for all UPS products from the ShipFrom to the ShipTo addresses. 
+// Ratetimeintransit = The server rates with transit time 
+// informationShoptimeintransit = The server validates the shipment, and returns rates and transit times for all UPS products from the ShipFrom to the ShipTo addresses.
+// Rate is the only valid request option for UPS Ground Freight Pricing requests.
+
 const version = "v2205";
-const requestoption = "Shop";
+const requestoption = "Rate";
 $query = array(
   "additionalinfo" => "timeintransit "
 );
@@ -113,7 +121,7 @@ curl_setopt_array($curl, [
     "transactionSrc: testing"
   ],
   CURLOPT_POSTFIELDS => json_encode($payload),
-  CURLOPT_URL => "https://wwwcie.ups.com/api/rating/" . version . "/" . requestoption . "?" . http_build_query($query),
+  CURLOPT_URL => "https://wwwcie.ups.com/api/rating/" . version . "/" . "?" . http_build_query($query),
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_CUSTOMREQUEST => "POST",
 ]);

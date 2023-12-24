@@ -132,6 +132,6 @@ curl_close($curl);
 if ($error) {
   echo "cURL Error #:" . $error;
 } else {
-  echo gettype($response);
+  echo gettype(json_decode($response));
 }
 ?>

@@ -132,6 +132,7 @@ curl_close($curl);
 if ($error) {
   echo "cURL Error #:" . $error;
 } else {
-  echo json_decode($response);
+  header('Content-Type: application/json');
+  echo $response;
 }
 ?>
